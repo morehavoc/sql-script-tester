@@ -1,0 +1,34 @@
+<SCRIPTTEST>
+	<CONNECTIONS>
+		<CONNECTION name="SQLServerTest" class="SQLServer" startModuleName="CORE" deleteScript="\PAth\To\Sql" logFile="\path\to\log\file">***Connection String goes here</CONNECTION>
+	</CONNECTIONS>
+	
+	<MODULES>
+		<MODULE name="CORE">
+			<SQL>\Path\To\Sql\Here</SQL>
+			<DEPENDENCIES></DEPENDENCIES>
+		</MODULE>
+		
+		<MODULE name="CROSSINGLOCATIONS">
+			<SQL>\Path\To\Sql\Here</SQL>
+			<DEPENDENCIES>
+				<DEPENDENCY required="Y">CORE</DEPENDENCY>
+			</DEPENDENCIES>
+		</MODULE>
+		
+		<MODULE name="GEOGRAPHICENTITIES">
+			<SQL>\Path\To\Sql\Here</SQL>
+			<DEPENDENCIES>
+				<DEPENDENCY required="Y">CORE</DEPENDENCY>
+			</DEPENDENCIES>
+		</MODULE>
+		
+		<MODULE name="LOCATIONMETADATA">
+			<SQL>\Path\To\Sql\Here</SQL>
+			<DEPENDENCIES>
+				<DEPENDENCY required="Y">CORE</DEPENDENCY>
+			</DEPENDENCIES>
+		</MODULE>
+	</MODULES>
+</SCRIPTTEST>
+	fa
